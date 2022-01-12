@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import { Header } from '.'
 
 jest.mock('next/router', () => {
@@ -24,6 +24,8 @@ describe('Header component', () => {
         const { getByText } = render(
             <Header />
         )
+
+        screen.logTestingPlaygroundURL()
 
         expect(getByText('Home')).toBeInTheDocument()
         expect(getByText('Posts')).toBeInTheDocument()
