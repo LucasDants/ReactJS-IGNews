@@ -33,7 +33,9 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     if(req.method === 'POST') {
         const buf = await buffer(req)
         const secret = req.headers['stripe-signature']
-
+        console.log('req', req)
+        console.log('buf', buf)
+        
         let event: Stripe.Event
 
         try {
@@ -44,7 +46,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     
         const { type } = event
 
-console.log('type event', type)
+        console.log('type event', type)
 
         if(relevantEvents.has(type)) {
           try {
