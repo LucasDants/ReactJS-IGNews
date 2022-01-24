@@ -1,4 +1,4 @@
-<h1 align="center">:journal: IgNews :journal:</h1>
+<h1 align="center">:newspaper: IgNews 📰</h1>
 <p align="center">IgNews!</p>
 
 <p align="center">
